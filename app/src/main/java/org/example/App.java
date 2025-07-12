@@ -4,11 +4,19 @@
 package org.example;
 
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
+  public String getGreeting() {
+    return "Hello World!";
+  }
 
-    public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
-    }
+  public static void main(String[] args) {
+    System.out.println(new App().getGreeting());
+
+    Calculate calc = new Calculate();
+
+    System.out.println("Sum of 2 and 3 is" + calc.sum(2, 3) + ". Average is" + calc.average(2, 3) + ".");
+    System.out
+        .println("Sum of 1 to 10 is" + calc.sumBetween(1, 10) + "Average is" + calc.averageBetween(1, 10) + ".");
+    System.out.println("Sum of odd of 1 to 10 is" + calc.sumOdd(1, 10) + ".");
+    System.out.println("Sum of even of 1 to 10 is" + calc.sumEven(1, 10) + ".");
+  }
 }
